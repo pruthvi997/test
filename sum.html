@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function SumofDigits(n){  //2. Sum of both Positive and Negative Numbers
+  var sum=0
+  if(n>0){
+    while(n>0){
+      var lastDigit= n%10
+      sum=sum+lastDigit
+      n=(n-lastDigit)/10
+    }
+    return sum
+  }
+  else if(n<0){
+    while(n<0){
+      var lastDigit=n%10
+      sum=sum-lastDigit
+      n=(n-lastDigit)/10
+    }
+    return sum
+  }
+}
+console.log(SumofDigits(1234))
+console.log(SumofDigits(-1234))
+
+
+ 
+</script>
+</body>
+</html> 
